@@ -381,22 +381,27 @@ body.pop_open{overflow:hidden;}
 
 #wrap {padding-top: 120px;}
 /* footer */
-.foot_left {float:left}
-#footer .terms_list {margin-bottom: 33px;}
-#footer .terms_list li {float:left}
-#footer .terms_list li a {padding: 0 20px;font-weight: 500;color: #000;font-size: 14px;position: relative;}
-#footer .terms_list li a:before {content:"";display: inline-block;height:20px;width: 1px;background: #000;position: absolute;top:0;left:0}
-#footer .terms_list li:first-child a {padding-left: 0;}
-#footer .terms_list li:first-child a:before{display: none;}
-.foot_info p {color: #858585;font-weight: 300;font-size: 12px}
-.foot_info p strong {font-weight: 500;}
-.foot_right {float:right}
-.main #footer {margin-top: -200px;padding-bottom: 60px}
-#footer {padding-bottom: 60px}
-#footer .call_order_area {padding: 8px 17px 8px 35px;background: #fff;border-radius:7px;color: #aaa;font-weight: 300;margin-bottom: 42px;}
-#footer .call_order_area strong {color: #ac0711;font-weight: 500;display: inline-block;margin-right:18px ;}
-#footer .call_order_area strong:before {content:"";display: inline-block; vertical-align: middle; width: 17px; height:17px; background: url(../images/common/ico_phone.png) 0 0 no-repeat; margin-right: 11px;}
-#footer .sns_list {text-align: right;}
-#footer .sns_list li {display: inline-block;padding: 0 7.5px;}
+#footer {background: #211f1d;color: #fff;padding-top: 50px;padding-bottom: 35px;}
+.logo_wrap {display: flex;align-items:flex-end;}
+.logo_wrap h2 {margin-right: 49px;}
+.logo_wrap ul {display: flex;}
+.logo_wrap ul li a:before{content:"";display: block;width: 2px; height:12px;background: #fff;position: absolute;top:4px;left:0;}
+.logo_wrap ul li:first-child a:before {display: none;}
+.logo_wrap ul li a {position: relative;padding: 0 7px;color: #fff;font-size: 13px;font-weight: bold;}
+.logo_wrap ul li:first-child a{padding-left: 0}
+.info_wrap {padding-top: 32px;}
+.info_wrap h2 {font-weight: normal;font-size: 12px;}
+.info_wrap ul {display: flex;}
+.info_wrap ul li {font-size: 12px;padding: 0 11px;font-size: 12px;position: relative;line-height: 20px;}
+.info_wrap ul li:first-child {padding-left: 0;}
+.info_wrap ul li:before {content:"";display: block;width: 2px; height:12px;background: #fff;position: absolute;top:4px;left:0;}
+.info_wrap ul li:first-child:before{display: none;}
+.info_wrap p {padding-top: 30px;font-weight: bold;font-size: 12px;}
+.sns_wrap {position: absolute;top:10px;right:0;}
+.sns_wrap p {font-size: 20px;margin-bottom: 30px;}
+.sns_wrap p strong {display: block;font-size: 32px;}
+.sns_wrap ul {display: flex;}
+.sns_wrap ul li {margin-right: 10px;}
+.sns_wrap ul li:last-child {margin: 0;}
 
 
