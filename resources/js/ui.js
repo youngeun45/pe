@@ -1,6 +1,7 @@
 $(function(){
     headerCtrl();
 	popupUI();
+	scrollItem()
 })
 function headerCtrl(){
     var $gnbA = $('#gnb>ul>li>a'),
@@ -88,3 +89,46 @@ var popClose = function(tar){
 		}
 	});
 };
+//scroll-animation
+function scrollItem() {
+	var $elements = $.find('*[data-animation]'),
+		$window = $(window);
+
+	if ($elements.length > 0) {
+		$(window).on('scroll resize', checkInView);
+		$(window).trigger('scroll');
+	}
+
+	function checkInView() {
+		var $winHeight = $window.height(),
+			$scrollTop = $window.scrollTop(),
+			$winBottom = ($scrollTop + $winHeight - 80); //bottom �ㅻ퉬寃뚯씠�� 
+
+		$.each($elements, function () {
+			var $el = $(this),
+				$elHeight = $($el).outerHeight(),
+				$elTop = $($el).offset().top,
+				$elBottom = ($elTop + $elHeight),
+				$animationClass = $el.data('animation'),
+				$delay = $el.data('delay'),
+				$duration = $el.data('duration');
+
+			if (!$el.hasClass('animated')) {
+				if ($delay > 0) {
+					$el.css({
+						'-webkit-animation-delay': $delay + 'ms',
+						'animation-delay': $delay + 'ms'
+					});
+				}
+				$el.addClass('animated');
+			}
+
+			if (($elBottom >= $scrollTop) && ($elTop <= $winBottom)) {
+				$el.addClass($animationClass);
+			} 
+//			else {
+//				$el.removeClass($animationClass);
+//			}
+		});
+	}
+}

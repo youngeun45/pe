@@ -241,13 +241,10 @@ sub{vertical-align:0;}
 .inp_tbl > div > * > .button{width:100%;padding:0;}
 
 /* button */
-.button{display:inline-block;position:relative;height:60px;line-height:58px;padding:0px 20px;;background: #ad0711;text-align:center;color:#fff;vertical-align:middle;cursor:pointer;box-sizing: border-box;border-radius:7px;font-weight: 600;}
+.button{display:inline-block;position:relative;padding:0px 20px;text-align:center;vertical-align:middle;cursor:pointer;box-sizing: border-box;}
 .button:hover,.button:focus,.button:active{text-decoration:none !important}
 .button:active{transform:scale(0.95)}
 
-.button.btn_pk_white {background: #fff;border:1px solid  rgb(243,39,108);color:  rgb(243,39,108);}
-.button.btn_pk_tran {background: transparent;border:1px solid  rgb(243,39,108);color:  rgb(243,39,108);}
-.button.btn_white {background: #fff;color: rgb(243,39,108);}
 .button.w400{width:400px;padding:0;}
 .button.w310{width:310px;padding:0;}
 .button.w150{width:150px;padding:0;}
