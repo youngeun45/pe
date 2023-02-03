@@ -132,7 +132,7 @@
             </div>
             <div class="swiper-container menu_wrap">
                 <div class="swiper-wrapper">
-                    <div>
+                    <div class="swiper-slide">
                         <div class="menu_img_wrap">
                             <div class="inner">
                                 <h3>핫데블치킨</h3>
@@ -148,6 +148,52 @@
                                     <li>
                                         <h4>원산지</h4>
                                         <p>닭고기(국내산)</p>
+                                        <a href="#" class="btn_all_view">전체보기</a>
+                                    </li>
+                                    <li>
+                                        <h4>알레르기 정보</h4>
+                                        <p>닭고기, 대두, 밀, 쇠고기, 토마토, 조개류(굴포함), 우유</p>
+                                        <a href="#" class="btn_all_view">전체보기</a>
+                                    </li>
+                                    <li>
+                                        <h4>소스별 영양정보</h4>
+                                        <ul class="tbl_nutrition">
+                                            <li><strong>열량(Kcal)</strong><span>234</span></li>
+                                            <li><strong>당류(g)</strong><span>26</span></li>
+                                            <li><strong>단백질(g)</strong><span>1</span></li>
+                                            <li><strong>포화지방(g)</strong><span>0</span></li>
+                                            <li><strong>나트륨(mg)</strong><span>880</span></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <p>소스 영양정보이기에 치킨과 혼합해 드시면 수치는 감소됩니다. <br>
+                                    ▪ 소스 100g 당 함량 기준으로 표기</p>
+                                <ul class="txt_list">
+                                    <li>※ 매장별로 가격이 상이 할 수 있습니다.</li>
+                                    <li>※ 판매 채널별로 가격이 상이 할 수 있습니다.</li>
+                                    <li>※ 메뉴를 취급하지 않는 가맹점이 있을 수 있습니다.</li>
+                                    <li>※ 사진은 실제 상품과 다를 수 있습니다.</li>
+                                </ul>
+                            </div>
+                            <button type="button" class="button btn_order">주문하기</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="menu_img_wrap">
+                            <div class="inner">
+                                <h3>핫핫데블치킨</h3>
+                                <p>아시아 3국의 대표 매운 고추인 한국 청양고추, 베트남 쥐똥고추, <br>인도 부트졸로키아고추로 만든 화끈하게 매운 치킨</p>
+                                <div class="menu_img">
+                                    <img src="./resources/img/contents/@img_menu2.jpg" alt="메뉴이미지">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu_info">
+                            <div class="inner">
+                                <ul class="info_list">
+                                    <li>
+                                        <h4>원산지</h4>
+                                        <p>소고기(국내산)</p>
                                         <a href="#" class="btn_all_view">전체보기</a>
                                     </li>
                                     <li>
@@ -230,10 +276,10 @@
       //main_banner_swiper
       var swiper = new Swiper(".menu_wrap", {
         calculateHeight : true,
-        loop : true,
+        loop:true,
         navigation: {
-          nextEl: ".main_banner .btn_next",
-          prevEl: ".main_banner .btn_prev",
+          nextEl: ".menu_wrap .btn_next",
+          prevEl: ".menu_wrap .btn_prev",
         },
       });
     })

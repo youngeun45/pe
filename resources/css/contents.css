@@ -1,12 +1,13 @@
 @charset "utf-8";
 /* common */
-.location {margin-bottom: 32px;width: 1280px;margin: 0 auto}
+.location {width: 1280px;margin: 30px auto 32px}
 .location ul {display: flex;justify-content:end;}
 .location ul li {padding-right: 8px;}
 .location ul li:after {content:">";color: #929292;padding-left: 8px;    display: inline-block;    vertical-align: -1px;}
 .location ul li a {font-size: 16px;;color: #929292;font-weight: 500;}
 .location ul li:last-child a {color: #111;}
 .location ul li:last-child:after {display: none;}
+.menu_bar + .location {margin-top: 40px;}
 /* main */
 .swiper {width: 100%;height:100%;}
 .main_banner {position: relative;height: 780px;}
@@ -64,7 +65,7 @@
 
 /* 메뉴 */
 .top_banner img {max-width: 100%;}
-.menu_bar {width: 100%;background: #fff;border-radius: 20px;padding: 30px 170px;box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.04);position: relative;top:-36px;margin-bottom: 10px;}
+.menu_bar {width: 100%;background: #fff;border-radius: 20px;padding: 30px 170px;box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.04);margin-top:-36px;}
 .menu_bar ul {display: flex;align-items: center;}
 .menu_bar ul li a {font-size: 20px;padding: 0 38px;font-weight: 600;transition:ease-in 0.2s;position: relative;}
 .menu_bar ul li a.active,
@@ -76,7 +77,8 @@
 .menu_bar ul li:last-child a:after {display: none;}
 .menu_wrap {height:1970px;position: relative;padding-top: 23px;}
 .menu_wrap .swiper-wrapper > div {width: 100%;}
-.menu_img_wrap .inner {width: 611px;}
+/* .menu_img_wrap {display: none;} */
+.menu_img_wrap .inner {width: 940px;}
 .menu_img_wrap h3{font-weight: 600;font-size: 42px;margin-bottom: 20px;}
 .menu_img_wrap p {font-weight: 500;;font-size: 22px;color: #606060;margin-bottom: 60px;}
 .menu_img_wrap .menu_img {text-align: center;margin-bottom: 59px;}
@@ -112,6 +114,16 @@
 .new_menu_wrap .btn_area button i {display: inline-block; width:38px; height:38px;background: url(../img/common/ico_viewmore.png) 0 0 no-repeat;margin-right: 15px;vertical-align: -8px;}
 .new_menu_wrap .btn_area button.btn_cart i {width: 47px ;height:39px;background-image: url(../img/common/ico_cart.png);}
 .new_menu_wrap .btn_area button + button {margin-left: 28px;}
-
-
-
+/* 원산지 및 알레르기 */
+.origin_nutrition_wrap {padding-top: 18px;padding-bottom: 196px;}
+.origin_nutrition_wrap .inner {width: 1280px;}
+.origin_nutrition_wrap h3 {font-size: 35px; font-weight: 600;margin-bottom: 20px;}
+.origin_nutrition_wrap .date {display: flex;justify-content:end;font-size: 500;font-size: 15px;padding-bottom: 13px;border-bottom: 3px solid #b1b1b1;}
+.origin_nutrition_wrap h4 {padding: 40px 0 10px 40px;font-weight: 600;font-size: 25px; color: #ad0711}
+.origin_nutrition_wrap .table {border-top: 3px solid #b1b1b1;}
+.origin_nutrition_wrap .table th{background: #f7f7f7;padding: 13px 0;text-align: left;font-weight: 600;font-size: 20px; border-bottom: 2px solid #b1b1b1;}
+.origin_nutrition_wrap .table span {display: block;border-left: 2px solid #b1b1b1;padding: 5px 40px;}
+.origin_nutrition_wrap .table tr th:first-child span {border-left: none;}
+.origin_nutrition_wrap .table td {padding: 13px 0;border-bottom: 2px solid #b1b1b1;font-weight: 500;}
+.origin_nutrition_wrap .table tr:last-child td {border-bottom-width: 3px;}
+.origin_nutrition_wrap .table tr td:first-child span {font-size: 20px; font-weight: 600;border-left: none;}
