@@ -8,6 +8,7 @@
 .location ul li:last-child a {color: #111;}
 .location ul li:last-child:after {display: none;}
 .menu_bar + .location {margin-top: 40px;}
+.sml_inner {width: 1280px;}
 /* main */
 .swiper {width: 100%;height:100%;}
 .main_banner {position: relative;height: 780px;}
@@ -116,14 +117,70 @@
 .new_menu_wrap .btn_area button + button {margin-left: 28px;}
 /* 원산지 및 알레르기 */
 .origin_nutrition_wrap {padding-top: 18px;padding-bottom: 196px;}
-.origin_nutrition_wrap .inner {width: 1280px;}
 .origin_nutrition_wrap h3 {font-size: 35px; font-weight: 600;margin-bottom: 20px;}
 .origin_nutrition_wrap .date {display: flex;justify-content:end;font-size: 500;font-size: 15px;padding-bottom: 13px;border-bottom: 3px solid #b1b1b1;}
 .origin_nutrition_wrap h4 {padding: 40px 0 10px 40px;font-weight: 600;font-size: 25px; color: #ad0711}
-.origin_nutrition_wrap .table {border-top: 3px solid #b1b1b1;}
-.origin_nutrition_wrap .table th{background: #f7f7f7;padding: 13px 0;text-align: left;font-weight: 600;font-size: 20px; border-bottom: 2px solid #b1b1b1;}
-.origin_nutrition_wrap .table span {display: block;border-left: 2px solid #b1b1b1;padding: 5px 40px;}
-.origin_nutrition_wrap .table tr th:first-child span {border-left: none;}
-.origin_nutrition_wrap .table td {padding: 13px 0;border-bottom: 2px solid #b1b1b1;font-weight: 500;}
-.origin_nutrition_wrap .table tr:last-child td {border-bottom-width: 3px;}
-.origin_nutrition_wrap .table tr td:first-child span {font-size: 20px; font-weight: 600;border-left: none;}
+.table {border-top: 3px solid #b1b1b1;}
+.table th{background: #f7f7f7;padding: 13px 0;text-align: left;font-weight: 600;font-size: 20px; border-bottom: 2px solid #b1b1b1;}
+.table span {display: block;border-left: 2px solid #b1b1b1;padding: 5px 40px;}
+.table tr th:first-child span {border-left: none;}
+.table td {padding: 13px 0;border-bottom: 2px solid #b1b1b1;font-weight: 500;}
+.table tr:last-child td {border-bottom-width: 3px;}
+.table tr td:first-child span {font-size: 20px; font-weight: 600;border-left: none;}
+/* 가맹점 */
+.franchise_wrap .count_area {background: url(../img/contents/bg_franchise_1.jpg)0 0 no-repeat;padding-top: 70px;padding-bottom: 62px;}
+.franchise_wrap .count_area h3 {margin-bottom: 78px;text-align: center;}
+.franchise_wrap .count_area ul {display: flex;justify-content: center;flex-wrap: wrap;}
+.franchise_wrap .count_area ul li {width: 410px;margin-bottom: 92px ;text-align: center;padding: 2px 0;}
+.franchise_wrap .count_area ul li:nth-child(2),
+.franchise_wrap .count_area ul li:nth-child(5) {width:463px ;border-left:1px solid #fff;border-right:1px solid #fff}
+.franchise_wrap .count_area ul li div {color: #ffb800;font-weight: 600;font-size: 25px;line-height: 1.4;}
+.franchise_wrap .count_area ul li div strong {font-size: 60px;font-weight: 800;}
+.franchise_wrap .count_area ul li p {color: #fff;font-size: 22px;}
+.franchise_swiper_wrap {padding-top: 110px;margin-bottom: 150px;}
+.franchise_swiper_wrap .swiper-container {height:675px;padding-bottom: 20px;}
+.franchise_wrap .franchise_swiper_wrap h4{ text-align: center;padding-bottom: 86px;padding-top: 0;margin-bottom: 0;;}
+.franchise_wrap .franchise_swiper_wrap h4:before{display: none;}
+.franchise_swiper .swiper-slide {padding-left: 10px;}
+.franchise_swiper .swiper-slide > div {padding: 31px 20px 47px;border-radius:18px;box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.16);width:370px;height:100%}
+.franchise_swiper i {display: flex;height:191px; align-items: center;justify-content: center;padding-bottom: 54px;border-bottom: 2px solid #ad0711;}
+.franchise_swiper .txt_area {padding: 20px 10px 0;}
+.franchise_swiper h5 {font-size: 22px;margin-bottom: 20px;font-weight: 600;}
+.franchise_swiper h5 strong {display: block;font-size: 38px; font-weight: 800;color: #ad0711;}
+.franchise_swiper span {color: #ad0711;font-size: 22px;font-weight: 500}
+.franchise_swiper .txt_area div {font-size: 20px;font-weight: 500;}
+.franchise_swiper p {color: #929292;font-size: 18px;margin-top: 22px}
+.franchise_swiper_wrap .control>button {display: block;width: 58px;height: 58px;;position: absolute;top:395px;z-index: 10;font-size: 0;color: transparent;cursor: pointer;border-radius: 50%;}
+.franchise_swiper_wrap .control .btn_prev {left: -75px;background: #ad0711 url('../img/common/ico_arrow_1.png') center center no-repeat;}
+.franchise_swiper_wrap .control .btn_next {right: -75px;background: #ad0711 url('../img/common/ico_arrow_2.png') center center no-repeat;}
+.franchise_wrap h4 {font-weight: 600;font-size: 25px;position: relative;margin-bottom: 60px;padding-top: 10px;}
+.franchise_wrap h4:before{content:"";display: block;width: 20px;height:3px;background: #ad0711;position: absolute;top:0; left:0;margin-bottom: 59px;}
+.franchise_step {margin-bottom: 100px;}
+.franchise_step ol {display: flex;flex-wrap:wrap;margin: -40px -35px;}
+.franchise_step ol li {padding: 40px 35px;width: 33.33%;}
+.franchise_step ol li div {padding-top: 20px;border-top: 2px solid #ad0711;}
+.franchise_step ol li strong {display: block;;font-weight: 600;font-size: 25px;margin-bottom: 15px;color: #ad0711;}
+.franchise_step ol li p {font-size: 18px; font-weight: 500}
+.franchise_benefits {margin-bottom: 100px;}
+.franchise_benefits h4 {width: 1280px;margin: 0 auto 60px;}
+.franchise_benefits > div {background: url('../img/contents/bg_franchise_2.jpg')0 0 no-repeat;}
+.franchise_benefits .inner {display: flex;align-items:center;padding: 97px 0;}
+.franchise_benefits .inner div {width: 50%;color: #fff;}
+.franchise_benefits .fst_box {font-size: 50px;text-align: center;}
+.franchise_benefits .fst_box strong {font-size: 155px;font-style: italic;}
+.franchise_benefits .scd_box ul li {border-left: 3px solid #fff;padding: 9px 0 ;padding-left: 30px;}
+.franchise_benefits .scd_box ul li + li {margin-top: 89px;}
+.franchise_benefits .scd_box ul li p {font-size: 20px; font-weight: 600;margin-bottom: 8px;}
+.franchise_benefits .scd_box ul li span {font-weight: 500;font-size: 16px;display: block;opacity: 0.7;}
+.franchise_benefits ul li i {display: inline-block;vertical-align: middle;}
+.franchise_cost {margin-bottom: 80px;}
+.franchise_cost .table {border-top-color: #ac0711;margin-bottom: 15px;}
+.franchise_cost .table th {color: #ac0711;background: none;padding: 11px 0;font-size: 22px;}
+.franchise_cost .table td {font-size: 20px;line-height: 1.4;}
+.franchise_cost .table span {padding: 0 40px;}
+.franchise_cost .table tfoot td{border-bottom-color: #ac0711;color: #ac0711;font-weight: 600;}
+.franchise_cost .table tfoot td span {border-left-color:#ac0711}
+.franchise_cost .table tfoot + tbody tr:last-child td {border-bottom-color: #ac0711;}
+.franchise_cost .table tfoot td:first-child {text-align: center;}
+.franchise_cost p {font-weight: 16px;font-weight: 500; color: #929292;padding-left: 30px;}
+.franchise_cost p i {display: inline-block;vertical-align: middle;}
