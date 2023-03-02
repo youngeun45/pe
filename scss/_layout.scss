@@ -109,22 +109,19 @@
         position: absolute;
         top:7.5rem;
         left:0;
-        opacity:1;
-        -webkit-transform:scale(0);
-        transform:scale(0);
-        -webkit-transform-origin:center top;
-        transform-origin:center top;
-        -webkit-transition:opacity 0.3s ease 0s,-webkit-transform 0.3s ease 0s;
-        transition:opacity 0.3s ease 0s,transform 0.3s ease 0s;
+        opacity:0;
+        height:0;
+        -webkit-transition:opacity 0.3s ease 0s;
+        transition:opacity 0.3s ease 0s;
         overflow:hidden;
-        height:24.7rem;
+        //height:24.7rem;
         width: 100%;
         text-align: center;
         &>li{
           &>a{
             display: block;
             padding: 0.8rem 0;
-            transition:color 0.2s ease-in;
+            transition:color 0.1s ease-in;
             font-size: 1.6rem;
             &:focus,
             &:hover{
@@ -139,10 +136,9 @@
 .gnb_open{
   #gnb>ul>li>ul {
     opacity:1;
-    -webkit-transform:scale(1);
-    transform:scale(1);
     -webkit-transition-delay:0.3s;
-    transition-delay:0.3s
+    transition-delay:0.3s;
+    height:auto;
   }
   #header {
     box-shadow: 0 2.7rem 1.8rem 0 rgba(58, 58, 58, 0.16);
