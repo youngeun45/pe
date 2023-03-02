@@ -1,5 +1,5 @@
 $(function(){
-    headerCtrl();
+  headerCtrl();
 	popupUI();
 	scrollItem()
 })
