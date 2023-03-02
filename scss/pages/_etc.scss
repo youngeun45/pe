@@ -1,0 +1,30 @@
+.location {
+  width: 128rem;
+  margin: 3rem auto 3.2rem;
+  ul {
+    display: flex;
+    justify-content:end;
+    li {
+      padding-right: 0.8rem;
+      &:after {
+        content:">";
+        color: var(--color-gray3);
+        padding-left:0.8rem;
+        display: inline-block;
+        vertical-align: -1px;
+      }
+      a {
+        font-size: 1.6rem;
+        color: var(--color-gray3);
+        font-weight: 500;
+      }
+      &:last-child a {
+        color: #111;
+      }
+      &:last-child:after {
+        display: none;
+      }
+    }
+  }
+}
+.menu_bar + .location {margin-top: 4rem;}

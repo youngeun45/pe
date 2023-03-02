@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+@import url('lib/animate.css');
+@import url('lib/swiper.css');
+@import url('lib/jquery-ui.min.css'); /* (only) for datepicker */
+@import url('lib/normalize.8.0.1.min.css');
+
+@import 'font', 'common', 'layout',
+  //페이지
+  'pages/main',
+  'pages/menu', 'pages/etc', 'pages/franchise';
+

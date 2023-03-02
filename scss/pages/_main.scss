@@ -1,0 +1,289 @@
+.swiper {
+  width: 100%;
+  height:100%;
+}
+.main_banner {
+  position: relative;
+  height: 78rem;
+  .swiper-slide {
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .img {
+    display: inline-block;
+    position:absolute;
+    left:50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .control {
+    &>button{
+      display: block;
+      position: absolute;
+      top: 50%;
+      z-index: 10;
+      margin-top: -2.7rem;
+    }
+    .btn_prev {
+      left: 50%;
+      margin-left: -75rem;
+      background: url('../img/common/ico_arrow_3.png');
+      width: 3.1rem;
+      height: 5.4rem;
+      font-size: 0;
+      color: transparent;
+      cursor: pointer;
+    }
+    .btn_next {
+      right: 50%;
+      margin-right: -75rem;
+      background: url('../img/common/ico_arrow_4.png');
+      width: 3.1rem;
+      height: 5.4rem;
+      font-size: 0;
+      color: transparent;
+      cursor: pointer;
+    }
+    &>span {
+      display: block;
+      position: absolute;
+      bottom: 2rem;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      z-index: 10;
+      color: #fff;
+    }
+  }
+}
+.main_order {
+  width: 137rem;
+   margin:-4.4rem auto 0 ;
+   padding: 2.9rem 7.9rem;
+   border-radius:2rem;
+   box-shadow: 0 2rem 3rem 0 rgba(58, 58, 58, 0.16);
+   position: relative;
+   z-index: 1;
+   background: #fff;
+   ul {
+    display: flex;
+    li {
+      padding: 0 5rem;
+      position: relative;
+      display: flex;
+      align-items:center;
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+      &:before{
+        content:"";
+        display: block;
+        width: 0.2rem; 
+        height:6rem;
+        position: absolute;
+        top:0;
+        left:0;
+        background: var(--color-wht3)
+      }
+      &:first-child:before{
+        display: none;
+      }
+      span {
+        font-weight: 600;
+        font-size: 3rem;
+        padding-right: 3rem;
+      }
+      .button {
+        font-size: 2.5rem;
+        border-radius:2.2rem;
+        width: 19rem;
+      }
+      .search_inp {
+        position: relative;
+        .input {
+          border:2px solid var(--primary-color);
+          border-radius:2.2rem;
+          padding-right: 7rem;
+          width: 30.9rem;
+          &::-webkit-input-placeholder {
+            color: #000;
+            font-weight: 500;
+            font-size: 1.8rem;
+          }
+          &::placeholder{
+            color: #000;
+            font-weight: 500;
+            font-size: 1.8rem;
+          }
+        }
+        button {
+          display: block;
+          width: 5.8rem; 
+          height:5.8rem; 
+          background: var(--primary-color) url(../img/common/ico_search.png) center center no-repeat;
+          position: absolute;
+          top:0;
+          right:0;
+          border-radius:0 2.2rem 2.2rem 0
+        }
+      }
+    }
+  }
+}
+.main_best_menu {
+  padding-top: 10.4rem;
+  .inner {
+    width: 124rem;
+  }
+  h3{
+    text-align: center;
+    margin-bottom: 7.7rem;
+  }
+  .swiper-container {
+    height:62.5rem;
+    margin-bottom: 13.3rem;
+  }
+  .swiper-slide{
+    position: relative;
+    div{
+      padding: 5.2rem 0 5.9rem;
+      box-shadow: 0.5rem 1rem 1.2rem 0 rgba(58, 58, 58, 0.16);
+      text-align: center;
+      border-radius:2rem;
+      background: var(--color-wht1);
+      overflow: hidden;
+      width: 33rem;
+      position: absolute;
+      left:50%;
+      transform: translateX(-50%);
+      margin-top: 7.1rem;
+    }
+    .img {
+      display: inline-block;
+      padding-bottom: 3rem;
+      width: 70%;
+    }
+    img {
+      max-width: 100%;
+    }
+    .menu_tit {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+    &.swiper-slide-active{
+      div{
+        width: 46rem;
+        border:0.3rem solid var(--primary-color);
+        margin-top: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+  .menu_txt{
+    display: none;
+    font-weight: 500;
+  }
+  button {
+    display: none;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 600;
+    width: 100%;
+    height:9.5rem; 
+    line-height: 9.3rem;
+    cursor:pointer;
+    margin-top: 3rem;
+  }
+  .swiper-slide-active{
+    .menu_txt,
+    button {
+      display: block;
+    }
+    .menu_tit {
+      margin-bottom: 2rem;
+    }
+    .img {
+      width: 100%;
+    }
+  }
+  .control{
+    &>button{
+      display: block;
+      width: 5.8rem;
+      height: 5.8rem;
+      position: absolute;
+      top: 60%;
+      z-index: 10;
+      margin-top: -2.9rem;
+      font-size: 0;
+      color: transparent;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    .btn_prev {
+      left: 50%;
+      margin-left: -75rem;
+      background: var(--primary-color) url('../img/common/ico_arrow_1.png') center center no-repeat;
+    }
+    .btn_next {
+      right: 50%;
+      margin-right: -75rem;
+      background: var(--primary-color) url('../img/common/ico_arrow_2.png') center center no-repeat;
+    }
+  }
+}
+.main_video {
+  height:106.5rem;
+  iframe {
+    height:100%;
+  }
+}
+.main_franchise_guide {
+  background: url('../img/common/bg_main_btm.jpg') 0 0 no-repeat;
+  width: 100%;
+  height:46rem;
+  color: var(--color-wht1);    
+  line-height: 1.2;
+  .inner{
+    padding-top: 10rem;
+    padding-right: 4rem;
+    div {
+      float:right
+    }
+  }
+  h3 {
+    font-size: 4rem;
+    margin-bottom: 5rem;
+    letter-spacing: -2px;
+    font-weight: 600;
+    span {
+      display: block;
+      font-size: 8rem;
+    }
+  }
+  ul {
+    display: flex;
+    li{
+      &+li{
+        margin-left: 3rem;
+      }
+      a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:23.6rem;
+        border:2px solid var(--color-wht1);
+        border-radius: 2rem;
+        height:5.2rem;
+        line-height: 5rem;
+        font-size: 2.5rem;
+        font-weight: 600;
+      }
+    }
+  }
+}

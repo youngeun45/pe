@@ -1,0 +1,44 @@
+{
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "~/../resources/css/"
+    }
+  ],
+  "liveSassCompile.settings.autoprefix": [
+    "> 2%",
+    "last 2 versions"
+  ],
+  "liveServer.settings.port": 5600,
+  "files.eol": "\n",
+  "editor.tabSize": 2,
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // "editor.formatOnSave": true,
+  "[html]": {
+    "editor.formatOnSave": true
+  },
+  "[scss]": {
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 9999,
+  "prettier.trailingComma":"none",
+  "htmlhint.options":{
+    "tagname-lowercase": true,
+    "attr-lowercase":["viewBox"],
+    "attr-value-double-quotes": true,
+    "doctype-first": true,
+    "tag-pair": true,
+    "spec-char-escape": true,
+    "id-unique": true,
+    "src-not-empty": true,
+    "attr-no-duplication": true,
+    "title-require": true,
+  }
+}
