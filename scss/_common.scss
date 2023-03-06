@@ -205,3 +205,53 @@ sub{vertical-align:0;}
     }
   }
 }
+@mixin ellipsis($line: 0) {
+  overflow: hidden;
+  word-break: break-all;
+  @if ($line == 0) {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  }
+}
+@for $i from 0 to 301 {
+  .pt_#{$i} {
+    padding-top: ($i * 0.1rem) !important;
+  }
+  .pb_#{$i} {
+    padding-bottom: ($i * 0.1rem) !important;
+  }
+  .mt_#{$i} {
+    margin-top: ($i * 0.1rem) !important;
+  }
+  .mb_#{$i} {
+    margin-bottom: ($i * 0.1rem) !important;
+  }
+  .p_#{$i} {
+    padding: ($i * 0.1rem) !important;
+  }
+  .pl_#{$i} {
+    padding-left: ($i * 0.1rem) !important;
+  }
+  .pr_#{$i} {
+    padding-right: ($i * 0.1rem) !important;
+  }
+  .ml_#{$i} {
+    margin-left: ($i * 0.1rem) !important;
+  }
+  .mr_#{$i} {
+    margin-right: ($i * 0.1rem) !important;
+  }
+  .ml_n#{$i} {
+    margin-left: -($i * 0.1rem) !important;
+  }
+  .mr_n#{$i} {
+    margin-right: -($i * 0.1rem) !important;
+  }
+  .h_#{$i} {
+    height: ($i * 0.1rem) !important;
+  }
+}
