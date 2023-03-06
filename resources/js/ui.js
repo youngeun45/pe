@@ -1,7 +1,8 @@
 $(function(){
   headerCtrl();
 	popupUI();
-	scrollItem()
+	scrollItem();
+	menu_Ui();
 })
 function headerCtrl(){
     var $gnbA = $('#gnb>ul>li>a'),
@@ -131,4 +132,22 @@ function scrollItem() {
 //			}
 		});
 	}
+}
+/* menu category */
+function menu_Ui() {
+  const $item = $('.menu_item');
+  $item.mouseenter(function () {
+    let $this = $(this).parents('.menu_list li');
+
+    if (!$this.hasClass('active')) {
+      $this.addClass('active');
+    }
+  });
+	$item.mouseleave(function () {
+    let $this = $(this).parents('.menu_list li');
+
+    if ($this.hasClass('active')) {
+      $this.removeClass('active');
+    } 
+  });
 }
