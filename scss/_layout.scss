@@ -26,8 +26,6 @@
     clear:both;
   }
 }
-
-
 /*header*/
 #header {
   padding: 1.6rem 0;
@@ -39,13 +37,14 @@
   z-index: 100;
   background: var(--color-wht1);
   height:12rem;
-  transition:height 0.3s ease
+  transition:height 0.3s ease;
 }
 .head_top{
   ul{
     display: flex;
     line-height: 1.2;
     justify-content: end;
+    padding-right: 2.4rem;
     li {
       position: relative;
       a {
@@ -70,7 +69,7 @@
 }
 #logo {
   position: absolute;
-  top:16px; 
+  top:1.6rem; 
   left:0;
   a {
     display: block;
@@ -92,30 +91,38 @@
         font-weight: 500;
         display: block;
       }
-      &:last-child a {
-        padding-right: 0;
-      }
       &.on>a{
         color: var(--primary-color);
-      }
+        position: relative;
+        &:after {
+          content:"";
+          display: block;
+          width: 100%;
+          height:0.3rem;
+          background: var(--primary-color);
+          position: absolute;
+          bottom:-0.1rem;
+          left:0;
+        }
+      }    
       &>ul{
         position: absolute;
         top:7.5rem;
-        left:4.4rem;
-        opacity:1;
-        -webkit-transform:scale(0);
-        transform:scale(0);
-        -webkit-transform-origin:center top;
-        transform-origin:center top;
-        -webkit-transition:opacity 0.3s ease 0s,-webkit-transform 0.3s ease 0s;transition:opacity 0.3s ease 0s,transform 0.3s ease 0s;
+        left:0;
+        opacity:0;
+        height:0;
+        -webkit-transition:opacity 0.3s ease 0s;
+        transition:opacity 0.3s ease 0s;
         overflow:hidden;
-        height:24.7rem;
+        //height:24.7rem;
         width: 100%;
+        text-align: center;
         &>li{
           &>a{
             display: block;
             padding: 0.8rem 0;
-            transition:color 0.2s ease-in;
+            transition:color 0.1s ease-in;
+            font-size: 1.6rem;
             &:focus,
             &:hover{
               color: var(--primary-color);
@@ -129,14 +136,23 @@
 .gnb_open{
   #gnb>ul>li>ul {
     opacity:1;
-    -webkit-transform:scale(1);
-    transform:scale(1);
     -webkit-transition-delay:0.3s;
-    transition-delay:0.3s
+    transition-delay:0.3s;
+    height:auto;
   }
   #header {
     box-shadow: 0 2.7rem 1.8rem 0 rgba(58, 58, 58, 0.16);
     height:42.4rem;
+    &:before{
+      content:"";
+      display: block;
+      width: 100%;
+      height:0.2rem;
+      background: #cbcbcb;
+      position: absolute;
+      top:11.8rem;
+      left:0;
+    }
   }
 }
 /* footer */
@@ -221,7 +237,7 @@
 }
 .sns_wrap {
   position: absolute;
-  top:10px;
+  top:1rem;
   right:0;
   p {
     font-size: 2rem;

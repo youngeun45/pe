@@ -50,6 +50,110 @@
     }
   }
 }
+.menu_list {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0;
+  position: relative;
+  margin:-2rem;
+  padding-bottom: 6rem;
+  li {
+    width: 33.33%;
+    padding: 2rem;
+    .menu_item {
+      font-size: 0;
+      display: block;
+      background: var(--color-wht1);
+      overflow: hidden;
+      border-radius: 1.8rem;
+      padding: 5.5rem 4.8rem 5rem;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+    }
+    i {
+      display: block;
+      img {
+        width: 100%;
+        max-width: 30rem;
+      }
+    }
+    strong {
+      display: block;
+      font-size: 2.5rem;
+      font-weight: 600;
+      padding-top: 3rem;
+      @include ellipsis(1);
+    }
+    span {
+      font-size: 1.8rem;
+      display: block;
+      @include ellipsis(1);
+    }
+    &.active {
+      .menu_info_cover {
+        opacity: 0.8;
+        top: 0;
+      }
+    }
+  }
+}
+.menu_info_cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  top: -100%;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) all;
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    position: absolute;
+    border-radius: 1rem;
+    background-color: var(--primary-color);
+  }
+  div {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: var(--color-wht1);
+      &:before {
+        content: '';
+        display: block;
+        width: 6rem;
+        height: 5.6rem;
+        margin: auto;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: 2rem;
+      }
+      &.btn_1:before {
+        background-image: url('../img/common/ico_viewmore2.png');
+      }
+      &.btn_2:before {
+        background-image: url('../img/common/ico_cart2.png');
+      }
+      &+a{
+        margin-left:6rem ;
+      }
+    }
+  }
+}
 .menu_wrap {
   height:197rem;
   position: relative;
@@ -186,12 +290,12 @@
     .btn_prev {
       left: 50%;
       margin-left: -641px;
-      background: var(--primary-color) url('../resources/img/common/ico_arrow_1.png') center center no-repeat;
+      background: var(--primary-color) url('../img/common/ico_arrow_1.png') center center no-repeat;
     }
     .btn_next {
       right: 50%;
       margin-right: -64.1rem;
-      background: var(--primary-color) url('../resources/img/common/ico_arrow_2.png') center center no-repeat;
+      background: var(--primary-color) url('../img/common/ico_arrow_2.png') center center no-repeat;
     }
   }
 }

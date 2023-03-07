@@ -1,7 +1,8 @@
 $(function(){
-    headerCtrl();
+  headerCtrl();
 	popupUI();
-	scrollItem()
+	scrollItem();
+	menu_Ui();
 })
 function headerCtrl(){
     var $gnbA = $('#gnb>ul>li>a'),
@@ -132,6 +133,7 @@ function scrollItem() {
 		});
 	}
 }
+<<<<<<< HEAD
 
 // brand_story
 window.addEventListener("load",() => {
@@ -155,3 +157,23 @@ window.addEventListener("load",() => {
     });
   });
 });
+=======
+/* menu category */
+function menu_Ui() {
+  const $item = $('.menu_item');
+  $item.mouseenter(function () {
+    let $this = $(this).parents('.menu_list li');
+
+    if (!$this.hasClass('active')) {
+      $this.addClass('active');
+    }
+  });
+	$item.mouseleave(function () {
+    let $this = $(this).parents('.menu_list li');
+
+    if ($this.hasClass('active')) {
+      $this.removeClass('active');
+    } 
+  });
+}
+>>>>>>> fcb0f7eec66548803619b8021ed3663c82a1d265
