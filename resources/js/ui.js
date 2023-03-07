@@ -132,3 +132,26 @@ function scrollItem() {
 		});
 	}
 }
+
+// brand_story
+window.addEventListener("load",() => {
+  let history_box = document.querySelectorAll('#container .story_wrap .history .history_box');
+  let history_box_height = [];
+
+  history_box.forEach((item, index) => {
+    history_box_height[index] = item.offsetHeight;
+		console.log(history_box_height);
+    item.querySelector('ul').style.height = 0;
+    item.querySelector('h4').addEventListener('click', () => {
+			item.querySelector('h4 span').classList.add('on');
+      if (item.className == 'history_box on') {
+				item.querySelector('h4 span').classList.remove('on');
+        item.classList.remove('on');
+        item.querySelector('ul').style.height = 0;
+      } else {
+        item.classList.add('on');
+        item.querySelector('ul').style.height = (history_box_height[index] - 51.66) / 10 + 'rem';
+      }
+    });
+  });
+});
