@@ -134,8 +134,8 @@ function scrollItem() {
 	}
 }
 
-// brand_story
 window.addEventListener("load",() => {
+	// brand_story
   let history_box = document.querySelectorAll('#container .story_wrap .history .history_box');
   let history_box_height = [];
 
@@ -153,6 +153,23 @@ window.addEventListener("load",() => {
         item.classList.add('on');
         item.querySelector('ul').style.height = (history_box_height[index] - 51.66) / 10 + 'rem';
       }
+    });
+  });
+
+	// franchise_support
+	let support_btn = document.querySelectorAll('.support_wrap .top_btns button');
+  let support_table = document.querySelectorAll('.support_wrap .support');
+
+  support_btn.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      support_btn.forEach((item, index) => {
+        item.classList.remove('active');
+      });
+      item.classList.add('active');
+      support_table.forEach((item, index) => {
+        item.classList.remove('on');
+      });
+      support_table[index].classList.add('on');
     });
   });
 });

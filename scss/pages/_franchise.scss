@@ -709,15 +709,23 @@
             border-bottom: 0.2rem solid var(--color-wht3);
             position: relative;
             th {
-              width: 12%;
+              width: 13%;
               text-align: start;
               position: relative;
-              span {
+              >span {
                 position:absolute;
                 top:2rem;
                 width:100%;
                 text-align:center;
                 font-size:2rem;
+                >span {
+                  padding-top:1rem;
+                  width:9rem;
+                  margin:0 auto;
+                  display:block;
+                  font-size:1.6rem;
+                  font-weight:normal;
+                }
               }
             }
             td {
@@ -725,6 +733,7 @@
               padding: 2rem 0;
               > ul {
                 position: relative;
+                line-height:1.4;
                 &::after {
                   content: '';
                   display: inline-block;
@@ -738,9 +747,8 @@
                 }
                 > li {
                   margin-left: 2.6rem;
-                  margin-bottom: 2rem;
-                  &:last-child {
-                    margin-bottom:0;
+                  &.top_txt {
+                    margin-bottom: 1.1rem;
                   }
                   span {
                     line-height:1.5;
@@ -754,15 +762,13 @@
                       margin-left: 0.6rem;
                     }
                   }
-                }
-              }
-            }
-          }
-          &:last-child {
-            td {
-              >ul {
-                >li {
-                  margin-bottom:0;
+                  >ul {
+                    >li {
+                      >ul {
+                        margin-left:1.5rem;
+                      }
+                    }
+                  }
                 }
               }
             }
