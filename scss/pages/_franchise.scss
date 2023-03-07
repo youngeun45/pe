@@ -3,7 +3,7 @@
     background: url(../img/contents/bg_franchise_1.jpg)0 0 no-repeat;
     padding-top: 7rem;
     padding-bottom: 6.2rem;
-    h3 {
+    h4 {
       margin-bottom: 7.8rem;
       text-align: center;
     }
@@ -337,22 +337,7 @@
   }
 
   >div {
-    .quick_menu {
-      display:flex;
-      justify-content:flex-end;
-      margin:5.3rem 0 4.8rem;
-      a {
-        color:var(--color-gray3);
-        &:last-child {
-          color:#000;
-        }
-      }
-      span {
-        color:var(--color-gray3);
-        margin:0 0.8rem;
-      }
-    }
-    h2 {
+    h3 {
       font-size:3.5rem;
       font-weight:bold;
       padding-bottom:3rem;
@@ -360,9 +345,8 @@
       margin-bottom:4.3rem;
     }
   }
-
+  // 개설문의
   .ask_wrap {
-    width:128rem; margin:0 auto; 
     .foundation_info {
       margin-bottom: 6rem;
       table {
@@ -583,7 +567,7 @@
       }
       .agree {
         > div {
-          h3 {
+          h4 {
             font-size:2.5rem;
             font-weight:bold;
             margin-bottom:2.4rem;
@@ -658,15 +642,15 @@
       }
     }
   }
-
+  
+  // 창업지원정책
   .support_wrap {
-    width:128rem; margin:0 auto;
     height:160.5rem;
     .top_btns {
       width:68.5rem;
       display: flex;
       justify-content: space-between;
-      h2 {
+      h3 {
         height:6rem;
         font-size:3.5rem;
         padding:0;
@@ -677,6 +661,7 @@
         line-height:6rem;
       }
       button {
+        cursor:pointer;
         border: 0.2rem solid var(--color-wht3);
         border-radius: 1.9rem;
         color: var(--color-wht3);
@@ -702,27 +687,12 @@
       &.on {
         display: block;
       }
-      &:last-child {
-        table {
-          tbody {
-            tr {
-              td {
-                ul {
-                  li {
-                    margin-bottom: 0;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
       > div {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
         margin-bottom:1.7rem;
-        h3 {
+        h4 {
           color:var(--primary-color);
           font-weight:bold;
           font-size:2.5rem;
@@ -742,24 +712,23 @@
               width: 12%;
               text-align: start;
               position: relative;
-              padding:2rem 0;
               span {
+                position:absolute;
+                top:2rem;
+                width:100%;
+                text-align:center;
                 font-size:2rem;
-                position: absolute;
-                top: 2rem;
-                left:50%; transform:translateX(-50%);
-                display: block;
               }
             }
             td {
-              font-size: 1rem;
-              padding: 0.6rem 0;
+              font-size: 1.8rem;
+              padding: 2rem 0;
               > ul {
                 position: relative;
                 &::after {
                   content: '';
                   display: inline-block;
-                  width: 1px;
+                  width: 0.2rem;
                   height: 100%;
                   background-color: var(--color-wht3);
                   position: absolute;
@@ -768,12 +737,13 @@
                   transform: translateY(-50%);
                 }
                 > li {
-                  margin-left: 0.7rem;
-                  margin-bottom: 1rem;
+                  margin-left: 2.6rem;
+                  margin-bottom: 2rem;
                   &:last-child {
-                    margin-bottom: 0;
+                    margin-bottom:0;
                   }
                   span {
+                    line-height:1.5;
                     display: inline-block;
                     transform: translateY(-0.1rem);
                     &.red {
@@ -784,42 +754,15 @@
                       margin-left: 0.6rem;
                     }
                   }
-                  > ul {
-                    padding-left: 0.5rem;
-                    > li {
-                      > ul {
-                        > li {
-                          padding-left: 1rem;
-                        }
-                      }
-                    }
-                  }
                 }
               }
             }
-            &.long {
-              th {
-                position: relative;
-                span {
-                  position: unset;
-                  &::after {
-                    content: '';
-                    display: inline-block;
-                    width: 1px;
-                    height: 80%;
-                    background-color: var(--color-wht3);
-                    position: absolute;
-                    top: 50%;
-                    right: -0.1rem;
-                    transform: translateY(-50%);
-                  }
-                }
-              }
-              td {
-                > ul {
-                  &::after {
-                    display: none;
-                  }
+          }
+          &:last-child {
+            td {
+              >ul {
+                >li {
+                  margin-bottom:0;
                 }
               }
             }

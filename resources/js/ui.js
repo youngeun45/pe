@@ -133,7 +133,6 @@ function scrollItem() {
 		});
 	}
 }
-<<<<<<< HEAD
 
 // brand_story
 window.addEventListener("load",() => {
@@ -144,10 +143,10 @@ window.addEventListener("load",() => {
     history_box_height[index] = item.offsetHeight;
 		console.log(history_box_height);
     item.querySelector('ul').style.height = 0;
-    item.querySelector('h4').addEventListener('click', () => {
-			item.querySelector('h4 span').classList.add('on');
+    item.querySelector('h5').addEventListener('click', () => {
+			item.querySelector('h5 span').classList.add('on');
       if (item.className == 'history_box on') {
-				item.querySelector('h4 span').classList.remove('on');
+				item.querySelector('h5 span').classList.remove('on');
         item.classList.remove('on');
         item.querySelector('ul').style.height = 0;
       } else {
@@ -157,7 +156,7 @@ window.addEventListener("load",() => {
     });
   });
 });
-=======
+
 /* menu category */
 function menu_Ui() {
   const $item = $('.menu_item');
@@ -176,4 +175,3 @@ function menu_Ui() {
     } 
   });
 }
->>>>>>> fcb0f7eec66548803619b8021ed3663c82a1d265
