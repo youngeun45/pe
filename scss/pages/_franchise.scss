@@ -331,7 +331,7 @@
       strong {
         text-shadow: 0.5rem 0.5rem 5rem rgba(0,0,0,0.5);
         font-size:6.79rem;
-        letter-spacing:-1rem;
+        letter-spacing:-0.7rem;
       }
     }
   }
@@ -758,9 +758,6 @@
                       font-weight: 500;
                       color: var(--primary-color);
                     }
-                    &.address {
-                      margin-left: 0.6rem;
-                    }
                   }
                   >ul {
                     >li {
@@ -773,6 +770,102 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+
+  // 인테리어
+  .interior_wrap {
+    margin-bottom:13rem;
+    .top_btns {
+      width:59.5rem;
+      display: flex;
+      justify-content: space-between;
+      h3 {
+        height:6rem;
+        font-size:3.5rem;
+        padding:0;
+        margin-bottom:9.5rem;
+        border:none;
+        padding-right:3.3rem;
+        border-right:0.2rem solid var(--color-wht3);
+        line-height:6rem;
+      }
+      button {
+        display:flex; align-items:center;
+        cursor:pointer;
+        border: 0.2rem solid var(--color-wht3);
+        border-radius: 1.9rem;
+        color: var(--color-wht3);
+        opacity: 0.8;
+        font-size:3rem;
+        font-weight: bold;
+        height:6rem;
+        padding:0 3rem;
+        line-height:6rem;
+        &.on {
+          opacity: 1;
+          border: 0.2rem solid var(--primary-color);
+          background-color: var(--primary-color);
+          color: #fff;
+        }
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+    }
+    .slider_wrap {
+      width:126.9rem;
+      height:55.2rem;
+      position: relative;
+      margin:0 auto;
+      display:none;
+      &.on {
+        display:block;
+      }
+      .swiper {
+        width:100%;
+        overflow:hidden;
+        .swiper-wrapper {
+          .swiper-slide {
+            display: flex;
+            align-items: center;
+            width:66.3rem;
+            span {
+              width:66.3rem;
+              display:block;
+              margin:0 auto;
+              border-radius:2rem;
+              overflow:hidden;
+              transition:all 0.5s;
+              img {width:100%;}
+            }
+            p {
+              position:absolute; bottom:0;
+              left:50%;
+              transform:translateX(-50%);
+              font-weight:bold;
+              font-size:2.5rem;
+            }
+            &.swiper-slide-active {span{border:0.3rem solid var(--primary-color);}}
+            &.swiper-slide-next {span{border:0.3rem solid var(--color-wht3);}}
+            &.swiper-slide-prev {span{border:0.3rem solid var(--color-wht3);}}
+          }
+        }
+      }
+      .swiper_btn {
+        position:absolute;
+        top:49%;
+        width:5.8rem; height:5.8rem;
+        background-color:var(--primary-color);
+        border-radius:5rem;
+        &::after {display:none;}
+        &.swiper-button-next {
+          right:-9.2rem;
+        }
+        &.swiper-button-prev {
+          left:-9.2rem;
         }
       }
     }
