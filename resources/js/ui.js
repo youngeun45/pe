@@ -35,61 +35,93 @@ function headerCtrl(){
         },10);
 	})
 }
-/* 레이어 팝업 */
-var $popSpeed = 300,
-	$popOpenBtn = '';
-var popupUI = function(){
-	$(document).on('click','.ui-pop-open',function(e) {
-		e.preventDefault();
-		var $pop = $(this).attr('href');
-		popOpen($pop,this);
-	});
-	$(document).on('click','.ui-pop-close',function(e) {
-		e.preventDefault();
-		var $pop = $(this).closest('.pop_wrap');
-		popClose($pop);
-	});
 
-	/*
-	//팝업 bg 클릭시 닫힘 기능
-	$('.pop_wrap').on('click',function(){
-		var $pop = $(this);
-		if(!$pop.hasClass('close_none')){popClose($pop);} 	//배경 클릭시 안닫히게 할때는 close_none 클래스 추가로 처리
-	}).on('click','.popup',function(e) {
-		e.stopPropagation();
-	});
-	*/
-};
-var popOpen = function(tar,btn){
-	if($(tar).length < 1 || $(tar).children('.popup').length < 1) return console.log('해당팝업없음');
-	var $visible = $('.pop_wrap:visible').size();
-	if(btn != null || btn != window)$popOpenBtn = $(btn);
-	if($visible > 0){
-		$(tar).css('z-index','+='+$visible);
-	}
-	$('body').addClass('pop_open');	
-	$(tar).fadeIn($popSpeed,function(){
-		$(this).attr({'tabindex':0}).focus();
-	});
-};
-var popClose = function(tar){
-	var $visible = $('.pop_wrap:visible').size();
-	if($visible == 1){
-		$('body').removeClass('pop_open');
-	}
-	$(tar).find('.popup').animate({'margin-top':0},$popSpeed,function(){
-		$(this).removeAttr('style');
-	});
-	$(tar).fadeOut($popSpeed,function(){
-		$(tar).removeAttr('tabindex');
-		if($popOpenBtn != ''){
-			if($popOpenBtn != window){
-				$popOpenBtn.focus();
-			}
-			$popOpenBtn = '';
-		}
-	});
-};
+//popup UI
+function popOpen(tar) {
+  $('body').addClass('pop_open');
+  $(tar).addClass('opened');
+  let time = $(tar).attr('data-time');
+
+  if ($(tar).hasClass('autoClose') === true) {
+    setTimeout(() => {
+      popClose(tar);
+      return;
+    }, time);
+  }
+}
+
+function popPositin(tar, speed) {
+  //console.log($(tar).attr('id'))
+  var $wrapH = $(tar).height(),
+    $pop = $(tar).find('.pop_wrap'),
+    $popH = $pop.outerHeight(),
+    $mT = Math.max(0, ($wrapH - $popH) / 2);
+  if (speed > 100) {
+    $pop.stop().animate({ 'margin-top': $mT }, speed);
+  } else {
+    $pop.css({ 'margin-top': $mT });
+  }
+}
+function popupUI() {
+  $('.pop_open').on('click', function (e) {
+    e.preventDefault();
+    const $this = $(this);
+    const pop = $this.attr('href');
+    popOpen(pop);
+  });
+  $('.pop_close').on('click', function (e) {
+    e.preventDefault();
+    const pop = $(this).attr('href');
+    $(pop + ' #msg_pop').empty();
+    popClose(pop);
+  });
+}
+function popClose(tar) {
+  if ($('.opened').length < 2) {
+    $('body').removeClass('hidden pop_open');
+  }
+  $(tar).removeClass('opened');
+
+  //$(tar).fadeOut(300);
+}
+
+function todayPopup() {
+  let popList = [];
+
+  if ($('.pop_today').length > 0) {
+    $('.pop_today').each(function () {
+      const $id = $(this).attr('id');
+      popList.push($id);
+    });
+  }
+  //$('.pop_today').hide();
+
+  $('.pop_today .pop_close').click(function (e) {
+    e.preventDefault();
+    const chk = $(this).closest('.pop_today').find('.todayChk'),
+      $id = $(this).closest('.pop_today').attr('id');
+
+    if (chk.is(':checked')) {
+      setCookie($id, 'done', 1);
+    }
+    //console.log(popList[i])
+    $('#' + $id).fadeOut();
+  });
+
+  for (let i in popList) {
+    if (cookiedata.indexOf(popList[i] + '=done') < 0) {
+      $('#' + popList[i]).show();
+    }
+  }
+}
+
+function setCookie(name, value, expiredays) {
+  const todayDate = new Date();
+  todayDate.setDate(todayDate.getDate() + expiredays);
+  todayDate.setHours(0, 0, 0, 0);
+  document.cookie = name + '=' + escape(value) + '; path=/; expires=' + todayDate.toGMTString() + ';';
+}
+
 //scroll-animation
 function scrollItem() {
 	var $elements = $.find('*[data-animation]'),
