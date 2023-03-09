@@ -647,7 +647,7 @@
   }
 
   >div {
-    h3 {
+    .sub_title {
       font-size:3.5rem;
       font-weight:bold;
       padding-bottom:2rem;
@@ -984,7 +984,7 @@
         font-weight: bold;
         height:6rem;
         padding:0 3.3rem;
-        line-height:6rem;
+        line-height:5rem;
         &.active {
           opacity: 1;
           border: 0.2rem solid var(--primary-color);
