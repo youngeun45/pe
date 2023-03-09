@@ -340,9 +340,9 @@
     h3 {
       font-size:3.5rem;
       font-weight:bold;
-      padding-bottom:3rem;
+      padding-bottom:2rem;
       border-bottom:0.3rem solid var(--color-wht3);
-      margin-bottom:4.3rem;
+      margin-bottom:4.2rem;
     }
   }
   // 개설문의
@@ -350,11 +350,12 @@
     .foundation_info {
       margin-bottom: 6rem;
       table {
-        width: 100%;
+        width: 128rem;
         tr {
           border-bottom: 0.2rem solid var(--color-wht3);
           th,
           td {
+            padding:1.1rem 0;
             position: relative;
             span {
               display: block;
@@ -391,7 +392,6 @@
             border-top: 0.3rem solid var(--primary-color);
             th {
               color: var(--primary-color);
-              padding:1.3rem 0;
               span {
                 font-size: 2.2rem;
                 &::after {
@@ -404,7 +404,6 @@
         tbody {
           tr {
             td {
-              padding: 1.5rem 0;
               font-size: 2rem;
               &:nth-child(2) {
                 span {
@@ -426,6 +425,11 @@
           display: flex;
           align-items: center;
           padding:1.4rem 0;
+          &:last-child {
+            label {
+              height:22.3rem;
+            }
+          }
           span {
             display: inline-block;
             color: var(--primary-color);
@@ -570,7 +574,7 @@
           h4 {
             font-size:2.5rem;
             font-weight:bold;
-            margin-bottom:2.4rem;
+            margin-bottom:1.7rem;
           }
           .text_box {
             width: 100%; height:30rem;
@@ -584,7 +588,7 @@
               padding:0 2rem 2.4rem 2rem;
             }
             &::-webkit-scrollbar {
-              width: 0.4rem;
+              width: 0.8rem;
               background-color: var(--color-wht3);
             }
             &::-webkit-scrollbar-thumb {
@@ -601,7 +605,7 @@
               border: 0.1rem solid #000;
               -webkit-appearance: none;
               position: relative;
-              margin:0 2.3rem 0 0.9rem;
+              margin:0 0.9rem 0 2.3rem;
               &::after {
                 content: '';
                 background-color: #000;
@@ -714,7 +718,7 @@
               position: relative;
               >span {
                 position:absolute;
-                top:2rem;
+                top:1.5rem;
                 width:100%;
                 text-align:center;
                 font-size:2rem;
@@ -730,7 +734,7 @@
             }
             td {
               font-size: 1.8rem;
-              padding: 2rem 0;
+              padding: 1.6rem 0;
               > ul {
                 position: relative;
                 line-height:1.4;
@@ -750,10 +754,13 @@
                   &.top_txt {
                     margin-bottom: 1.1rem;
                   }
+                  &.sub_txt {
+                    margin-top:1rem;
+                  }
                   span {
                     line-height:1.5;
                     display: inline-block;
-                    transform: translateY(-0.1rem);
+                    transform: translateY(-0.2rem);
                     &.red {
                       font-weight: 500;
                       color: var(--primary-color);
@@ -786,7 +793,7 @@
         height:6rem;
         font-size:3.5rem;
         padding:0;
-        margin-bottom:9.5rem;
+        margin-bottom:6rem;
         border:none;
         padding-right:3.3rem;
         border-right:0.2rem solid var(--color-wht3);

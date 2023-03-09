@@ -1,0 +1,123 @@
+#container {
+  .order_banner {
+    width:100%;
+    height:37.5rem;
+    background-image:url('../img/contents/order/bg_order_banner.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    color:#fff;
+    font-style:italic;
+    display:flex; justify-content:center; align-items:center;
+    div {
+      width:128rem;
+      text-align:end;
+    }
+  }
+  
+  // order_order
+  .order_wrap {
+    h3 {
+      border-bottom:none;
+      margin-bottom:0;
+      padding-bottom:2.3rem;
+    }
+    >ul {
+      display:flex;
+      margin-bottom:6.5rem;
+      li {
+        &:nth-child(2) {
+          margin:0 4rem;
+        }
+        a {
+          display:flex;
+          flex-direction:column; align-items:center; justify-content:center;
+          width:40rem;
+          height:40rem;
+          border-radius:1.8rem;
+          box-shadow: 0rem 0.8rem 2rem -0.3rem rgba(0, 0, 0, 0.3);
+          position:relative;
+          .ico {
+            width:16.1rem; height:12.8rem;
+            display:block;
+            background-repeat: no-repeat;
+            background-size:cover;
+            margin-bottom:6.9rem;
+          }
+          .under_line {
+            position:absolute; bottom:16.2rem; left:50%; transform:translateX(-50%);
+            width:24rem; height:0.3rem;
+            background-color:var(--color-wht3);
+          }
+          p {
+            font-size:2.5rem; color:#000; font-weight:bold;
+            text-align:center;
+          }
+          &:active {
+            transform: scale(0.95);
+          }
+        }
+        &:hover {
+          p {
+            color:var(--primary-color);
+          }
+          .under_line {
+            background-color:var(--primary-color);
+          }
+        }
+        &.delivery {
+          a {
+            span {
+              background-image:url('../img/contents/order/ico_order_order01.png');
+            }
+          }
+          &:hover {
+            a {
+              span {
+                background-image:url('../img/contents/order/ico_order_order02.png');
+              }
+            }
+          }
+        }
+        &.package {
+          a {
+            span {
+              background-image:url('../img/contents/order/ico_order_order03.png');
+            }
+          }
+          &:hover {
+            a {
+              span {
+                background-image:url('../img/contents/order/ico_order_order04.png');
+              }
+            }
+          }
+        }
+        &.coupon {
+          a {
+            span {
+              background-image:url('../img/contents/order/ico_order_order05.png');
+            }
+          }
+          &:hover {
+            a {
+              span {
+                background-image:url('../img/contents/order/ico_order_order06.png');
+              }
+            }
+          }
+        }
+      }
+    }
+    >p {
+      color:var(--color-wht3);
+      font-size:1.8rem;
+      text-align:center;
+      margin-bottom:9.9rem;
+      span {
+        font-size:2rem;
+        font-weight:bold;
+        display:block;
+      }
+    }
+  }
+}
