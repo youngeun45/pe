@@ -153,6 +153,38 @@
       tbody {
         tr {
           border-bottom:0.2rem solid var(--color-wht3);
+          &.context {
+            th {
+              >span {height:22.3rem; display:inline-block;}
+              }
+            td {              
+              &::before {
+                height:22.3rem;
+              }
+            }
+          }
+          &.addfile {
+            th {
+              >span {height:8.7rem;  display:inline-block;}
+            }
+            td {
+              &::before {
+                height:8.7rem;
+              }
+              input {
+                margin-bottom:0.8rem;
+              }
+              ul {
+                li {
+                  font-size:1.4rem;
+                  i {
+                    transform:scale(0.4) translateY(-0.5rem);
+                    color:var(--primary-color);
+                  }
+                }
+              }
+            }
+          }
           th {
             width:10%;
             text-align:start;
@@ -177,28 +209,6 @@
               content:""; display:inline-block;
               width:0.2rem; height:2.4rem;
               background-color:var(--color-wht3);
-            }
-            &.context {
-              &::before {
-                height:22.3rem;
-              }
-            }
-            &.addfile {
-              &::before {
-                height:8.7rem;
-              }
-              input {
-                margin-bottom:0.8rem;
-              }
-              ul {
-                li {
-                  font-size:1.4rem;
-                  i {
-                    transform:scale(0.4) translateY(-0.5rem);
-                    color:var(--primary-color);
-                  }
-                }
-              }
             }
             >input {
               width:30rem; height:4rem;
@@ -247,8 +257,6 @@
       .ch_box {
         margin-left:2.2rem;
         margin-bottom:2.4rem;
-        input {}
-        label {}
       }
       ul {
         margin:0 0 7.8rem 2.2rem;
