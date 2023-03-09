@@ -1067,14 +1067,12 @@
                   &.sub_txt {
                     margin-top:1rem;
                   }
-                  span {
-                    line-height:1.5;
-                    display: inline-block;
-                    transform: translateY(-0.2rem);
-                    &.red {
-                      font-weight: 500;
-                      color: var(--primary-color);
-                    }
+                  .red {
+                    font-weight: 500;
+                    color: var(--primary-color);
+                  }
+                  i {
+                    transform:scale(0.4);
                   }
                   >ul {
                     >li {
