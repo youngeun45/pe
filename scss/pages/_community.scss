@@ -76,3 +76,116 @@
   }
 }
 //상품권
+.coupon_wrap {
+  h3 {
+    padding: 2.6rem 0;
+    border-bottom: 0.3rem solid var(--color-wht3);
+    margin-bottom: 3rem;
+    font-size: 3.5rem;
+    font-weight: 600;
+  }
+  h4{
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding-bottom: 2rem;
+    border-bottom: 0.3rem solid var(--primary-color);
+    margin-bottom: 2.5rem;
+  }
+  .coupon_guide {
+    ul{
+      padding-bottom: 3rem;
+      border-bottom: 0.3rem solid var(--color-wht3);
+      margin-bottom: 3rem;
+      li{
+        font-weight: 500;
+        font-size: 2rem;
+      }
+      li + li {
+        padding-top: 1rem;
+      }
+    }
+  }
+  .coupon_type {
+    margin-bottom: 4rem;
+    ul{
+      display: flex;
+      justify-content: space-between;
+      li{
+        &+li{
+          padding-left: 3rem;
+        }
+        h4 {
+          margin-bottom: 0;
+          border:none;
+        }
+        button {
+          cursor:pointer;
+        }
+      }
+    }
+  }
+  .coupon_shop {
+    margin-bottom: 3.3rem;
+    h4{
+      border: none;
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 1.8rem;
+      font-weight: 500;
+      padding-bottom: 1.5rem;
+    }
+    ul{
+      border-top: 0.3rem solid var(--primary-color);
+      border-bottom:0.3rem solid var(--color-wht3);
+      display: flex;
+      flex-wrap:wrap;
+      padding: 1.3rem 0;
+      li{
+        width: 16.666%;
+        text-align: center;
+        border-bottom:0.2rem solid var(--color-wht3);
+        position: relative;
+        padding: 1.2rem 0;
+        &:before{
+          content:"";
+          display: block;
+          width:1px;
+          height:70%;
+          background: var(--color-wht3);
+          position: absolute;
+          top:50%;
+          left:0;
+          transform:translateY(-50%);
+        }
+        &:first-child{
+          &:before{
+            display: none;
+          }
+        }
+        &:nth-child(7){
+          &:before{
+            display: none;
+          }
+        }
+        &:nth-child(13){
+          &:before{
+            display: none;
+          }
+          border-bottom: none;
+        }
+        &:last-child{
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  .coupon_inquire {
+    margin-bottom: 16rem;
+    div {
+      padding-top: 1rem;
+      padding-bottom: 4rem;
+      border-bottom: 0.3rem solid var(--color-wht3);
+    }
+  }
+}
