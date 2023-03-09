@@ -136,6 +136,27 @@ function scrollItem() {
 
 // brand_story
 window.addEventListener("load",() => {
+// franchise_interior
+	let interior_btn = document.querySelectorAll(".interior_wrap .top_btns button");
+	let interior_slide = document.querySelectorAll(".interior_wrap .slider_wrap");
+	interior_slide.forEach((item, index) => {
+		item.classList.remove("on");
+		interior_slide[0].classList.add("on");
+	});
+
+	interior_btn.forEach((item,index) => {
+		item.addEventListener("click",() => {
+			interior_btn.forEach((item, index) => {
+				item.classList.remove("on");
+			});
+			item.classList.add("on");
+			interior_slide.forEach((item, index) => {
+				item.classList.remove("on");
+			});
+			interior_slide[index].classList.add("on");
+		});
+	});
+
 	// brand_story
   let history_box = document.querySelectorAll('#container .story_wrap .history .history_box');
   let history_box_height = [];
@@ -173,28 +194,6 @@ window.addEventListener("load",() => {
       support_table[index].classList.add('on');
     });
   });
-
-	// franchise_interior
-	let interior_btn = document.querySelectorAll(".interior_wrap .top_btns button");
-	let interior_slide = document.querySelectorAll(".interior_wrap .slider_wrap");
-		
-	interior_slide.forEach((item, index) => {
-		item.classList.remove("on");
-	});
-	interior_slide[0].classList.add("on");
-
-	interior_btn.forEach((item,index) => {
-		item.addEventListener("click",() => {
-			interior_btn.forEach((item, index) => {
-				item.classList.remove("on");
-			});
-			item.classList.add("on");
-				interior_slide.forEach((item, index) => {
-						item.classList.remove("on");
-				});
-				interior_slide[index].classList.add("on");
-			});
-		});
 });
 
 /* menu category */
