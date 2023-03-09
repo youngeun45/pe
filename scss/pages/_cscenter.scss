@@ -1,0 +1,115 @@
+#container {
+  .cscenter_banner {
+    width:100%;
+    height:37.5rem;
+    background-image:url('../img/contents/cscenter/bg_cscenter_banner.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    color:#fff;
+    font-style:italic;
+    display:flex; justify-content:center; align-items:center;
+    div {
+      width:128rem;
+      text-align:end;
+    }
+  }
+
+// contact
+  .contact_wrap {
+    margin-bottom:13rem;
+    h3 {
+      border-bottom:none;
+      margin-bottom:0;
+      padding-bottom:2.3rem;
+    }
+    .map {
+      width:100%;
+      height:52rem;
+      background-color:#efefef;
+    }
+    h4 {
+      margin-top:3.7rem;
+      padding-bottom:1.4rem;
+      margin-bottom:1.6rem;
+      font-size:2.5rem; font-weight:bold;
+      border-bottom:0.2rem solid var(--color-wht3);
+    }
+    p {
+      font-size:2rem;
+      padding-bottom:1.6rem;
+      border-bottom:0.2rem solid var(--color-wht3);
+    }
+    table {
+      tbody {
+        tr {
+          height:5.5rem;
+          border-bottom:0.1rem solid var(--color-wht3);
+          &:last-child {
+            border-bottom:0.2rem solid var(--color-wht3);
+          }
+          th {
+            width:25.7%;
+            span {
+              display:block;
+              font-size:2rem;
+              padding-left:2.9rem;
+              text-align:start;
+              color:var(--primary-color);
+            }
+          }
+          td {
+            position:relative;
+            span {
+              font-size:2rem;
+              &::before {
+                content:"";
+                display:inline-block;
+                width:0.2rem; height:2.3rem;
+                background-color:var(--color-wht3);
+                position:absolute; top:50%; left:-2.9rem;
+                transform:translateY(-50%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+// policy_personal, policy_operation
+  .policy_wrap {
+    margin-bottom:13rem;
+    h3 {
+      border-bottom:none;
+      margin-bottom:0;
+      padding-bottom:2.3rem;
+    }
+    .txt {
+      width:100%;
+      height:60rem;
+      white-space:pre-line;
+      overflow:auto;
+      border:0.2rem solid var(--color-wht3);
+      padding:0 2.1rem 2.1rem 2.1rem;
+      font-size:1.6rem;
+      &::-webkit-scrollbar {
+        width: 0.8rem;
+        background-color: var(--color-wht3);
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--primary-color);
+      }
+    }
+  }
+
+// policy_email
+  .email_wrap {
+    margin-bottom:33.2rem;
+    h3 {
+      margin-bottom:2.8rem;
+    }
+    p {
+      font-size:2rem;
+    }
+  }
+}

@@ -103,7 +103,48 @@
             </div>
         </header>
         <div id="container">
-            
+            <div class="franchise_banner">
+                <div>
+                    <p>PELICANA is Success</p>
+                    <strong>한 길만 걷고 가맹점만 생각하다</strong>
+                </div>
+            </div>
+            <div class="interior_wrap inner sml_inner">
+                <div class="location">
+                  <ul>
+                      <li><a href="#">HOME</a></li>
+                      <li><a href="#">FRANCHISE</a></li>
+                      <li><a href="#">인테리어</a></li>
+                  </ul>
+                </div>
+                <div class="top_btns">
+                    <h3>인테리어</h3>
+                  <button class="on" type="button">35평 보기</button>
+                  <button type="button">15평 보기</button>
+                </div>
+                <div class="slider_wrap slider35 on">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><span><img src="../resources/img/contents/franchise/img_franchise_interior01.png" alt="35평 첫번째 내부 이미지"></span><p class="txt">35평 내부 1</p></div>
+                            <div class="swiper-slide"><span><img src="../resources/img/contents/franchise/img_franchise_interior01.png" alt="35평 외부 이미지"></span><p class="txt">35평 외부</p></div>
+                            <div class="swiper-slide"><span><img src="../resources/img/contents/franchise/img_franchise_interior01.png" alt="35평 두번째 내부 이미지"></span><p class="txt">35평 내부 2</p></div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev swiper_btn"><span><img src="../resources/img/common/ico_arrow_1.png" alt="왼쪽 화살표"></span></div>
+                    <div class="swiper-button-next swiper_btn"><span><img src="../resources/img/common/ico_arrow_2.png" alt="오른쪽 화살표"></span></div>
+                </div>
+                <div class="slider_wrap slider15 on">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><span><img src="../resources/img/contents/franchise/img_franchise_interior02.png" alt="15평 첫번째 내부 이미지"></span><p class="txt">15평 내부 1</p></div>
+                            <div class="swiper-slide"><span><img src="../resources/img/contents/franchise/img_franchise_interior02.png" alt="15평 외부 이미지"></span><p class="txt">15평 외부</p></div>
+                            <div class="swiper-slide"><span><img src="../resources/img/contents/franchise/img_franchise_interior02.png" alt="15평 두번째 내부 이미지"></span><p class="txt">15평 내부 2</p></div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev swiper_btn"><span><img src="../resources/img/common/ico_arrow_1.png" alt="왼쪽 화살표"></span></div>
+                    <div class="swiper-button-next swiper_btn"><span><img src="../resources/img/common/ico_arrow_2.png" alt="오른쪽 화살표"></span></div>
+                </div>
+            </div>
         </div>
         <footer id="footer">
             <div class="inner">
@@ -146,8 +187,48 @@
     
 </body>
 <script>
-    $(function(){
-      
-    })
-  </script>
+    const swiper35 = new Swiper('.slider35 .swiper', {
+        effect:"coverflow",
+        grabCursor:"true",
+        slidesPerView: 'auto',
+        centeredSlides:true,
+        spaceBetween: 480,
+        coverflowEffect: {
+            rotate:0,
+            depth:920,
+            slideShadows:false,
+            scale:1
+        },
+        
+        direction: 'horizontal',
+            loop: false,
+
+        navigation: {
+            nextEl: '.slider35 .swiper-button-next span',
+            prevEl: '.slider35 .swiper-button-prev span',
+        }
+    });
+
+    const swiper15 = new Swiper('.slider15 .swiper', {
+        effect:"coverflow",
+        grabCursor:"true",
+        slidesPerView: 'auto',
+        centeredSlides:true,
+        spaceBetween: 480,
+        coverflowEffect: {
+            rotate:0,
+            depth:920,
+            slideShadows:false,
+            scale:1
+        },
+        
+        direction: 'horizontal',
+            loop: false,
+
+        navigation: {
+            nextEl: '.slider15 .swiper-button-next span',
+            prevEl: '.slider15 .swiper-button-prev span',
+        }
+    });
+</script>
 </html>

@@ -133,8 +133,13 @@ function scrollItem() {
 		});
 	}
 }
+<<<<<<< HEAD
 // brand_story
+=======
+
+>>>>>>> 9c43473adfb6a88bb2dd4ca840cf9fdd844702c1
 window.addEventListener("load",() => {
+	// brand_story
   let history_box = document.querySelectorAll('#container .story_wrap .history .history_box');
   let history_box_height = [];
 
@@ -154,6 +159,47 @@ window.addEventListener("load",() => {
       }
     });
   });
+
+	// franchise_support
+	let support_btn = document.querySelectorAll('.support_wrap .top_btns button');
+  let support_table = document.querySelectorAll('.support_wrap .support');
+
+  support_btn.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      support_btn.forEach((item, index) => {
+        item.classList.remove('active');
+      });
+      item.classList.add('active');
+      support_table.forEach((item, index) => {
+        item.classList.remove('on');
+      });
+      support_table[index].classList.add('on');
+    });
+  });
+
+	// franchise_interior
+	let interior_btn = document.querySelectorAll(".interior_wrap .top_btns button");
+	let interior_slide = document.querySelectorAll(".interior_wrap .slider_wrap");
+		
+		interior_slide.forEach((item, index) => {
+				item.classList.remove("on");
+		});
+		interior_slide[0].classList.add("on");
+
+	interior_btn.forEach((item,index) => {
+		item.addEventListener("click",() => {
+			interior_btn.forEach((item, index) => {
+				item.classList.remove("on");
+			});
+			item.classList.add("on");
+						interior_slide.forEach((item, index) => {
+								item.classList.remove("on");
+						});
+						interior_slide[index].classList.add("on");
+				});
+	});
+
+
 });
 
 /* menu category */
@@ -173,4 +219,8 @@ function menu_Ui() {
       $this.removeClass('active');
     } 
   });
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9c43473adfb6a88bb2dd4ca840cf9fdd844702c1
