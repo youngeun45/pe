@@ -112,4 +112,49 @@
       font-size:2rem;
     }
   }
+
+// cscenter
+  .cscenter_wrap {
+    h3 {margin-bottom:0; padding-bottom:2rem;}
+    table {
+      tbody {
+        tr {
+          th {
+            >span {
+              >span {}
+            }
+          }
+          td {
+            >input {}
+            >label {
+              >input {}
+            }
+            select {
+              option {}
+            }
+            textarea {}
+            ul {
+              li {
+                span {}
+              }
+            }
+          }
+        }
+      }
+    }
+    >div {
+      h4 {}
+      .txt_box {}
+      .ch_box {
+        input {}
+        label {}
+        ul {
+          li {
+            span {}
+          }
+        }
+      }
+    }
+    button {}
+  }
 }

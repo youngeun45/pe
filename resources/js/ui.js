@@ -134,69 +134,67 @@ function scrollItem() {
 	}
 }
 
-window.addEventListener("load",() => {
-	// brand_story
-  let history_box = document.querySelectorAll('#container .story_wrap .history .history_box');
-  let history_box_height = [];
+// window.addEventListener("load",() => {
+// 	// brand_story
+//   let history_box = document.querySelectorAll('#container .story_wrap .history .history_box');
+//   let history_box_height = [];
 
-  history_box.forEach((item, index) => {
-    history_box_height[index] = item.offsetHeight;
-		console.log(history_box_height);
-    item.querySelector('ul').style.height = 0;
-    item.querySelector('h5').addEventListener('click', () => {
-			item.querySelector('h5 span').classList.add('on');
-      if (item.className == 'history_box on') {
-				item.querySelector('h5 span').classList.remove('on');
-        item.classList.remove('on');
-        item.querySelector('ul').style.height = 0;
-      } else {
-        item.classList.add('on');
-        item.querySelector('ul').style.height = (history_box_height[index] - 51.66) / 10 + 'rem';
-      }
-    });
-  });
+//   history_box.forEach((item, index) => {
+//     history_box_height[index] = item.offsetHeight;
+// 		console.log(history_box_height);
+//     item.querySelector('ul').style.height = 0;
+//     item.querySelector('h5').addEventListener('click', () => {
+// 			item.querySelector('h5 span').classList.add('on');
+//       if (item.className == 'history_box on') {
+// 				item.querySelector('h5 span').classList.remove('on');
+//         item.classList.remove('on');
+//         item.querySelector('ul').style.height = 0;
+//       } else {
+//         item.classList.add('on');
+//         item.querySelector('ul').style.height = (history_box_height[index] - 51.66) / 10 + 'rem';
+//       }
+//     });
+//   });
 
-	// franchise_support
-	let support_btn = document.querySelectorAll('.support_wrap .top_btns button');
-  let support_table = document.querySelectorAll('.support_wrap .support');
+// 	// franchise_support
+// 	let support_btn = document.querySelectorAll('.support_wrap .top_btns button');
+//   let support_table = document.querySelectorAll('.support_wrap .support');
 
-  support_btn.forEach((item, index) => {
-    item.addEventListener('click', () => {
-      support_btn.forEach((item, index) => {
-        item.classList.remove('active');
-      });
-      item.classList.add('active');
-      support_table.forEach((item, index) => {
-        item.classList.remove('on');
-      });
-      support_table[index].classList.add('on');
-    });
-  });
+//   support_btn.forEach((item, index) => {
+//     item.addEventListener('click', () => {
+//       support_btn.forEach((item, index) => {
+//         item.classList.remove('active');
+//       });
+//       item.classList.add('active');
+//       support_table.forEach((item, index) => {
+//         item.classList.remove('on');
+//       });
+//       support_table[index].classList.add('on');
+//     });
+//   });
 
-	// franchise_interior
-	let interior_btn = document.querySelectorAll(".interior_wrap .top_btns button");
-	let interior_slide = document.querySelectorAll(".interior_wrap .slider_wrap");
+// 	// franchise_interior
+// 	let interior_btn = document.querySelectorAll(".interior_wrap .top_btns button");
+// 	let interior_slide = document.querySelectorAll(".interior_wrap .slider_wrap");
 		
-		interior_slide.forEach((item, index) => {
-				item.classList.remove("on");
-		});
-		interior_slide[0].classList.add("on");
+// 		interior_slide.forEach((item, index) => {
+// 				item.classList.remove("on");
+// 		});
+// 		interior_slide[0].classList.add("on");
 
-	interior_btn.forEach((item,index) => {
-		item.addEventListener("click",() => {
-			interior_btn.forEach((item, index) => {
-				item.classList.remove("on");
-			});
-			item.classList.add("on");
-						interior_slide.forEach((item, index) => {
-								item.classList.remove("on");
-						});
-						interior_slide[index].classList.add("on");
-				});
-	});
-
-
-});
+// 	interior_btn.forEach((item,index) => {
+// 		item.addEventListener("click",() => {
+// 			interior_btn.forEach((item, index) => {
+// 				item.classList.remove("on");
+// 			});
+// 			item.classList.add("on");
+// 						interior_slide.forEach((item, index) => {
+// 								item.classList.remove("on");
+// 						});
+// 						interior_slide[index].classList.add("on");
+// 				});
+// 	});
+// });
 
 /* menu category */
 function menu_Ui() {
