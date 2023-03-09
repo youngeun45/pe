@@ -133,11 +133,22 @@ function scrollItem() {
 		});
 	}
 }
+<<<<<<< HEAD
+// brand_story
+=======
 
+<<<<<<< HEAD
 // window.addEventListener("load",() => {
 // 	// brand_story
 //   let history_box = document.querySelectorAll('#container .story_wrap .history .history_box');
 //   let history_box_height = [];
+=======
+>>>>>>> 9c43473adfb6a88bb2dd4ca840cf9fdd844702c1
+window.addEventListener("load",() => {
+	// brand_story
+  let history_box = document.querySelectorAll('#container .story_wrap .history .history_box');
+  let history_box_height = [];
+>>>>>>> a7e0f89bdba25b2f6ae59ad0df29bc9f34462988
 
 //   history_box.forEach((item, index) => {
 //     history_box_height[index] = item.offsetHeight;
@@ -213,4 +224,8 @@ function menu_Ui() {
       $this.removeClass('active');
     } 
   });
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9c43473adfb6a88bb2dd4ca840cf9fdd844702c1

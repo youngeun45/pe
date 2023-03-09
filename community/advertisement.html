@@ -103,7 +103,79 @@
             </div>
         </header>
         <div id="container">
-            
+            <div class="top_banner">
+                <img src="../resources/img/contents/community/@img_ad_top_banner.jpg" alt="새로운 소식을 빠르게 전달하다">
+            </div>
+            <div class="inner">
+                <div class="location">
+                    <ul>
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">COMMUNITY</a></li>
+                        <li><a href="#">광고</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ad_vdo_wrap">
+                <iframe id='player' src='' allowfullscreen='allowfullscreen' frameborder='0' title='tv cf 영상'></iframe>
+            </div>
+            <div class="inner sml_inner">
+                <div class="ad_vdo_list">
+                    <h3>광고리스트</h3>
+                    <h4>2020</h4>
+                    <ul>
+                        <li>
+                            <a href="O-lpdL5IIQU" class="img btn_show"><span class="ad_btn"><i class="fa fa-play"></i><span class="blind">광고보기</span></span></a>
+                                        <p>[40주년]2022 치킨의 클래식 페리카나</p>
+                        </li>
+                        <li>
+                            <a href="PUTP0sE7v3k" class="img btn_show"><span class="ad_btn"><i class="fa fa-play"></i><span class="blind">광고보기</span></span></a>
+                                        <p>페리카나 광고영상</p>
+                        </li>
+                        <li>
+                            <a href="O-lpdL5IIQU" class="img btn_show"><span class="ad_btn"><i class="fa fa-play"></i><span class="blind">광고보기</span></span></a>
+                                        <p>[40주년]2022 치킨의 클래식 페리카나</p>
+                        </li>
+                        <li>
+                            <a href="O-lpdL5IIQU" class="img btn_show"><span class="ad_btn"><i class="fa fa-play"></i><span class="blind">광고보기</span></span></a>
+                                        <p>[40주년]2022 치킨의 클래식 페리카나</p>
+                        </li>
+                        <li>
+                            <a href="O-lpdL5IIQU" class="img btn_show"><span class="ad_btn"><i class="fa fa-play"></i><span class="blind">광고보기</span></span></a>
+                                        <p>[40주년]2022 치킨의 클래식 페리카나</p>
+                        </li>
+                    </ul>
+                    <h4>2019</h4>
+                    <ul>
+                        <li>
+                            <a href="O-lpdL5IIQU" class="img btn_show"><span class="ad_btn"><i class="fa fa-play"></i><span class="blind">광고보기</span></span></a>
+                                        <p>[40주년]2022 치킨의 클래식 페리카나</p>
+                        </li>
+                        <li>
+                            <a href="PUTP0sE7v3k" class="img btn_show"><span class="ad_btn"><i class="fa fa-play"></i><span class="blind">광고보기</span></span></a>
+                                        <p>페리카나 광고영상</p>
+                        </li>
+                        <li>
+                            <a href="O-lpdL5IIQU" class="img btn_show"><span class="ad_btn"><i class="fa fa-play"></i><span class="blind">광고보기</span></span></a>
+                                        <p>[40주년]2022 치킨의 클래식 페리카나</p>
+                        </li>
+                    </ul>
+                    <h4>2018</h4>
+                    <ul>
+                        <li>
+                            <a href="O-lpdL5IIQU" class="img btn_show"><span class="ad_btn"><i class="fa fa-play"></i><span class="blind">광고보기</span></span></a>
+                                        <p>[40주년]2022 치킨의 클래식 페리카나</p>
+                        </li>
+                        <li>
+                            <a href="PUTP0sE7v3k" class="img btn_show"><span class="ad_btn"><i class="fa fa-play"></i><span class="blind">광고보기</span></span></a>
+                                        <p>페리카나 광고영상</p>
+                        </li>
+                        <li>
+                            <a href="O-lpdL5IIQU" class="img btn_show"><span class="ad_btn"><i class="fa fa-play"></i><span class="blind">광고보기</span></span></a>
+                                        <p>[40주년]2022 치킨의 클래식 페리카나</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <footer id="footer">
             <div class="inner">
@@ -147,7 +219,19 @@
 </body>
 <script>
     $(function(){
-      
-    })
+			$('.btn_show').click(function(){
+				var $href = $(this).attr('href');
+				$("#player").attr({src:"http://www.youtube.com/embed/"+$href+"?enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer&amp;rel=0&amp;autoplay=1&amp;autohide=1&amp;showinfo=0&amp;wmode=opaque"});
+				return false;
+			})
+			$(window).load(function(){
+				$('.ad_vdo_list li').each(function(){
+					var $this = $(this),
+						$href = $this.find('a').attr('href');
+						$(this).find('.img').prepend('<img src="https://img.youtube.com/vi/'+$href+'/mqdefault.jpg" alt="썸네일" />')
+				})
+				$('.ad_vdo_list').children('ul').children('li').first().find('.btn_show').trigger('click');
+			})
+		});
   </script>
 </html>
