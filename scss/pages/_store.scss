@@ -1,0 +1,145 @@
+#container{
+  .store_banner {
+    width:100%;
+    height:37.5rem;
+    background-image:url('../img/contents/store/bg_store_banner.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    color:#fff;
+    font-style:italic;
+    display:flex; justify-content:center; align-items:center;
+    div {
+      width:128rem;
+      text-align:start;
+      p {
+        font-size:3.7rem;
+        line-height:2rem;
+        text-shadow: 0.5rem 0.5rem 3rem rgba(0,0,0,0.5);
+      }
+      strong {
+        text-shadow: 0.5rem 0.5rem 5rem rgba(0,0,0,0.5);
+        font-size:6.79rem;
+        letter-spacing:-0.5rem;
+      }
+    }
+  }
+
+  .store_wrap {
+    .sub_title {
+      padding-bottom:2.1rem;
+      margin-bottom:6.4rem;
+    }
+    .search_box {
+      width:94.7rem;
+      margin:0 auto;
+      display:flex; justify-content:space-between; align-items:center;
+      padding-bottom:10rem;
+      >div {
+        .area {
+          width:75.3rem;
+          display:flex; align-items:center;
+          margin-bottom:1.5rem;
+          p {font-size:2.5rem; font-weight:bold;}
+          select {
+            width:31.2rem; height:5rem;
+            border:0.1rem solid var(--color-wht3);
+            color:var(--color-wht3);
+            text-align:center; font-size:2rem;
+            &.mid {margin:0 3.6rem 0 2.3rem;}
+          }
+        }
+        .store {
+          width:75.3rem;
+          display:flex; justify-content:space-between; align-items:center;
+          p {font-size:2.5rem; font-weight:bold;}
+          input {
+            width:66rem; height:5rem;
+            border:0.1rem solid var(--color-wht3);
+          }
+        }
+      }
+      button {
+        display:inline-block;
+        width:15.6rem; height:11.5rem;
+        font-size:2.5rem;
+        font-weight:bold; color:var(--primary-color);
+        border:0.2rem solid var(--primary-color);
+      }
+    }
+    .info_box {
+      width:128rem;
+      display:flex; justify-content:space-between;
+      >div {
+        width:61rem;
+        transform:translateY(-5rem);
+        .result {
+          font-size:2.2rem;
+          margin-bottom:1.8rem;
+          >span {
+            color:var(--primary-color);
+          }
+        }
+        .store_box {
+          border-top:0.3rem solid var(--color-wht3);
+          border-bottom:0.3rem solid var(--color-wht3);
+          margin-top:2.9rem;
+          &:nth-child(2) {
+            margin-top:0;
+          }
+          h4 {
+            font-size:2.5rem; font-weight:bold;
+            margin:1.8rem 0 0.8rem;
+          }
+          p {
+            font-size:1.9rem;
+            &.phone {
+              font-weight:bold;
+            }
+          }
+          >div {
+            display:flex; justify-content:space-between; align-items:center;
+            margin:1.6rem 0 2.4rem 0;
+            .left_icon {
+              span {
+                display:inline-block;
+                width:4.1rem; height:3.1rem;
+                background-repeat:no-repeat; background-size:cover;
+                margin-right:3rem;
+                &.drive {
+                  background-image:url(../img/contents/store/ico_store_01.png);
+                  &.on {background-image:url(../img/contents/store/ico_store_02.png);}
+                }
+                &.package {
+                  background-image:url(../img/contents/store/ico_store_03.png);
+                  &.on {background-image:url(../img/contents/store/ico_store_04.png);}
+                }
+                &.in-store {
+                  background-image:url(../img/contents/store/ico_store_05.png);
+                  &.on {background-image:url(../img/contents/store/ico_store_06.png);}
+                }
+                &.e-coupon {
+                  background-image:url(../img/contents/store/ico_store_07.png);
+                  &.on {background-image:url(../img/contents/store/ico_store_08.png);}
+                }
+              }
+            }
+            .right_icon {
+              display:flex;
+              span {
+                display:inline-block;
+                width:2rem; height:3rem;
+                background-image:url(../img/contents/store/ico_store_gps.png);
+                margin-right:0.6rem;
+              }
+              p {font-size:1.9rem; font-weight:bold; margin-right:3.5rem;}
+            }
+          }
+        }
+      }
+      .map {
+        width:64.2rem; height:85.3rem;
+        background-color:#efefef;
+      }
+    }
+  }
+}

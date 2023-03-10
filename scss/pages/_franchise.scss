@@ -452,7 +452,6 @@
             }
             td {
               position:relative;
-              padding-left:2.6rem;
               padding:1.3rem 0 1.3rem 2.6rem;
               &::before {
                 position:absolute; top:50%; left:0;
@@ -486,6 +485,7 @@
                     -webkit-appearance: none;
                     position: relative;
                     margin-right:1rem;
+                    padding:0;
                     &::after {
                       content: '';
                       background-color: #000;
