@@ -156,6 +156,17 @@ sub{vertical-align:0;}
 }
 .button:hover,.button:focus,.button:active{text-decoration:none !important}
 .button:active{transform:scale(0.95)}
+.button{
+  &.btn_red{
+    border:0.2rem solid var(--primary-color);
+    color:var(--primary-color);
+    background: var(--color-wht1);
+  }
+  &.h35{
+    height:4.6rem;
+    line-height: 4.4rem;
+  }
+}
 
 .table {
   border-top: 3px solid var(--color-wht3);
